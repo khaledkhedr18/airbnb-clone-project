@@ -209,3 +209,37 @@ The backend includes full documentation of RESTful endpoints using the OpenAPI s
 ### Database Optimization
 
 Implements indexing for faster data retrieval and uses caching mechanisms to reduce database load. These optimizations improve overall system performance and scalability.
+
+## API Security
+
+Security is a fundamental component of the Airbnb Clone backend. Protecting user data, ensuring secure financial transactions, and maintaining platform integrity are critical responsibilities. The following security measures will be implemented:
+
+### 1. Authentication
+
+All API endpoints that deal with sensitive operations (e.g., user profiles, property creation, bookings, and payments) will require user authentication using secure token-based systems such as JWT (JSON Web Tokens).
+**Why it matters:** Ensures that only verified users can access or modify their own data, protecting against impersonation or data breaches.
+
+### 2. Authorization
+
+Role-based access control (RBAC) will be enforced to ensure users can only perform actions they are permitted to (e.g., only hosts can manage properties, only guests can create bookings).
+**Why it matters:** Prevents unauthorized access to features and data, maintaining trust and data separation between user types.
+
+### 3. Data Validation and Sanitization
+
+All input received through APIs will be validated and sanitized to prevent common attacks like SQL injection, XSS, or malformed payloads.
+**Why it matters:** Protects the system from being compromised by malicious inputs that target database or application vulnerabilities.
+
+### 4. HTTPS and Secure Headers
+
+All communication will occur over HTTPS, and security headers (like `Content-Security-Policy`, `X-Content-Type-Options`) will be configured to prevent common web-based attacks.
+**Why it matters:** Protects user credentials, payment data, and other sensitive information from being intercepted during transmission.
+
+### 5. Rate Limiting and Throttling
+
+To prevent abuse and denial-of-service (DoS) attacks, rate limiting will be applied to restrict the number of API requests allowed within a specific time frame.
+**Why it matters:** Helps maintain API stability and availability by blocking abusive or bot-driven traffic.
+
+### 6. Secure Payment Handling
+
+Payment endpoints will integrate with secure third-party gateways and avoid handling raw card details directly. Tokenization and secure storage of transaction data will be prioritized.
+**Why it matters:** Ensures financial data is handled in compliance with best practices and legal regulations (e.g., PCI-DSS).
