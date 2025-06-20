@@ -177,3 +177,35 @@ Handles transaction records related to bookings.
 
 - A payment belongs to one booking
 - A booking has one payment record
+
+## Feature Breakdown
+
+This section outlines the main features implemented in the backend of the Airbnb Clone project, each designed to replicate essential functionalities of the Airbnb platform.
+
+### User Management
+
+Allows users to register, log in securely, and manage their profile information. It supports role differentiation, enabling users to function as guests or hosts depending on their account type.
+
+### Property Management
+
+Enables hosts to create, update, and manage property listings, including setting titles, descriptions, pricing, and location data. This feature ensures that properties are discoverable and editable through structured endpoints.
+
+### Booking System
+
+Allows guests to book available properties for specific dates, including check-in and check-out details. It handles booking availability, prevents date overlaps, and ensures that booking data is linked to both the user and the property.
+
+### Payment Processing
+
+Integrates a system for processing payments related to bookings. It securely records transaction details, payment amounts, and statuses, ensuring financial data integrity and booking confirmation.
+
+### Review System
+
+Allows users to leave feedback and ratings for properties they’ve stayed in. This helps future guests make informed decisions and gives hosts valuable insights to improve their listings.
+
+### API Documentation
+
+The backend includes full documentation of RESTful endpoints using the OpenAPI standard. It also supports GraphQL for more flexible data querying, enhancing integration with frontend systems or third-party clients.
+
+### Database Optimization
+
+Implements indexing for faster data retrieval and uses caching mechanisms to reduce database load. These optimizations improve overall system performance and scalability.
