@@ -1,7 +1,3 @@
-Sure, here's a clean, professional version of your `README.md` overview without emojis:
-
----
-
 # Airbnb Clone – Backend
 
 ## Overview
@@ -26,3 +22,23 @@ The Airbnb Clone is a backend project developed as part of the ALX Software Engi
 - **Caching and Session Management**: Redis
 - **Containerization**: Docker
 - **CI/CD Pipelines**: Automated workflows for testing and deployment
+
+## Team Roles
+
+A successful project depends on clearly defined roles and responsibilities. The Airbnb Clone backend project includes the following key roles:
+
+### Backend Developer
+
+Responsible for designing, implementing, and maintaining the API endpoints, business logic, and integration of core features such as user authentication, property management, booking, payments, and reviews. They ensure the application logic is aligned with the project requirements and is scalable and secure.
+
+### Database Administrator (DBA)
+
+Manages the structure, performance, and integrity of the database. This includes designing schemas, creating indexes for optimization, performing backups, and ensuring data security. In this project, the DBA ensures PostgreSQL is optimized for handling large volumes of user and property data.
+
+### DevOps Engineer
+
+Handles the infrastructure and deployment pipeline of the application. Responsible for setting up Docker containers, managing CI/CD pipelines, monitoring server performance, and ensuring high availability and scalability of backend services. DevOps also configures Redis, Celery, and manages cloud deployments if applicable.
+
+### QA Engineer
+
+Ensures the reliability and quality of the backend system by writing automated tests, performing manual testing, and validating each feature against its requirements. The QA engineer is also responsible for reporting bugs, verifying bug fixes, and supporting regression testing across the system.
