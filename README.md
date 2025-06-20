@@ -78,3 +78,102 @@ A containerization platform used to package the application and its dependencies
 ### CI/CD Pipelines
 
 Automated tools and scripts (e.g., GitHub Actions, GitLab CI) used to test, build, and deploy the application whenever changes are pushed to the codebase. This ensures continuous integration and rapid delivery of new features and bug fixes.
+
+## Database Design
+
+The backend database schema is designed to support core functionalities such as user management, property listings, booking flow, reviews, and payments. Below are the main entities, their key fields, and how they relate to each other.
+
+### 1. Users
+
+Represents individuals using the platform, including both guests and hosts.
+
+**Key Fields:**
+
+- `id`: Unique identifier for the user
+- `username`: User's login name
+- `email`: Contact email (unique)
+- `password_hash`: Encrypted password
+- `is_host`: Boolean indicating whether the user can list properties
+
+**Relationships:**
+
+- A user can own multiple properties
+- A user can make multiple bookings
+- A user can leave multiple reviews
+
+---
+
+### 2. Properties
+
+Represents properties listed by hosts for booking.
+
+**Key Fields:**
+
+- `id`: Unique identifier for the property
+- `title`: Name/title of the property
+- `description`: Detailed info about the property
+- `location`: Address or city
+- `price_per_night`: Cost per night
+
+**Relationships:**
+
+- A property belongs to one user (host)
+- A property can have many bookings
+- A property can receive multiple reviews
+
+---
+
+### 3. Bookings
+
+Represents a reservation made by a user for a property.
+
+**Key Fields:**
+
+- `id`: Unique identifier for the booking
+- `user_id`: Foreign key to the user who made the booking
+- `property_id`: Foreign key to the booked property
+- `check_in`: Start date of booking
+- `check_out`: End date of booking
+
+**Relationships:**
+
+- A booking is linked to one user and one property
+- A booking may be associated with one payment
+
+---
+
+### 4. Reviews
+
+Represents user feedback and ratings for properties.
+
+**Key Fields:**
+
+- `id`: Unique identifier for the review
+- `user_id`: Reviewer (foreign key to user)
+- `property_id`: Reviewed property
+- `rating`: Numeric rating (e.g., 1 to 5)
+- `comment`: Optional text feedback
+
+**Relationships:**
+
+- A review is created by one user for one property
+- A property can have many reviews
+
+---
+
+### 5. Payments
+
+Handles transaction records related to bookings.
+
+**Key Fields:**
+
+- `id`: Unique identifier for the payment
+- `booking_id`: Related booking
+- `amount`: Total amount paid
+- `payment_method`: e.g., card, PayPal
+- `payment_status`: e.g., pending, completed
+
+**Relationships:**
+
+- A payment belongs to one booking
+- A booking has one payment record
