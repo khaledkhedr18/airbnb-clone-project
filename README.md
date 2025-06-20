@@ -42,3 +42,39 @@ Handles the infrastructure and deployment pipeline of the application. Responsib
 ### QA Engineer
 
 Ensures the reliability and quality of the backend system by writing automated tests, performing manual testing, and validating each feature against its requirements. The QA engineer is also responsible for reporting bugs, verifying bug fixes, and supporting regression testing across the system.
+
+## Technology Stack
+
+The backend of the Airbnb Clone project leverages modern and widely-used technologies to ensure robustness, scalability, and maintainability. Below is an overview of each technology and its role in the system:
+
+### Django
+
+A high-level Python web framework used to build the core of the application. It provides the structure for models, views, and controllers (MVC) and handles URL routing, request handling, and integrates seamlessly with the database.
+
+### Django REST Framework (DRF)
+
+A powerful toolkit built on top of Django for building Web APIs. It simplifies the creation of RESTful endpoints that handle CRUD operations for users, properties, bookings, reviews, and payments.
+
+### GraphQL
+
+An alternative API query language that allows clients to request exactly the data they need. It provides flexibility in how frontend applications interact with backend data.
+
+### PostgreSQL
+
+A powerful open-source relational database system used for structured data storage. It supports complex queries and relationships between entities like users, properties, and bookings.
+
+### Celery
+
+An asynchronous task queue used to handle background tasks such as sending confirmation emails, processing payments, or handling delayed actions outside of the main request-response cycle.
+
+### Redis
+
+An in-memory data structure store used as a message broker for Celery and for caching frequently accessed data, improving overall performance and reducing database load.
+
+### Docker
+
+A containerization platform used to package the application and its dependencies into containers, ensuring consistent development, testing, and production environments.
+
+### CI/CD Pipelines
+
+Automated tools and scripts (e.g., GitHub Actions, GitLab CI) used to test, build, and deploy the application whenever changes are pushed to the codebase. This ensures continuous integration and rapid delivery of new features and bug fixes.
