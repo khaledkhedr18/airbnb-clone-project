@@ -243,3 +243,21 @@ To prevent abuse and denial-of-service (DoS) attacks, rate limiting will be appl
 
 Payment endpoints will integrate with secure third-party gateways and avoid handling raw card details directly. Tokenization and secure storage of transaction data will be prioritized.
 **Why it matters:** Ensures financial data is handled in compliance with best practices and legal regulations (e.g., PCI-DSS).
+
+## CI/CD Pipeline
+
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of building, testing, and deploying code changes. In this project, the pipeline ensures that new features, bug fixes, and updates are automatically validated and deployed in a reliable and consistent manner.
+
+### Why CI/CD is Important
+
+- **Code Quality**: Ensures all code changes are tested before integration to avoid breaking the application.
+- **Speed**: Automates the testing and deployment process, accelerating development cycles.
+- **Reliability**: Reduces human error and ensures consistent deployment across environments.
+- **Feedback Loop**: Provides immediate feedback on code issues, making it easier to fix problems early.
+
+### Tools Used
+
+- **GitHub Actions**: Automates workflows for testing and deployment whenever changes are pushed to the repository.
+- **Docker**: Ensures consistency across development, testing, and production environments by containerizing the application.
+- **Docker Compose**: Manages multi-container environments (e.g., Django, PostgreSQL, Redis) during automated testing.
+- **Optional Integrations**: Other tools like `pytest`, `coverage.py`, and cloud deployment platforms (e.g., AWS, Heroku) may be used for advanced CI/CD pipelines.
